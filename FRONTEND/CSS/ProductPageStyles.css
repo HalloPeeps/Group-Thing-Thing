@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif, Italiana,;
+  }
+  
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #E84A50;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+  
+  .nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 200%;
+  }
+  
+  .hero {
+    background-color: #f25f66;
+    padding: 4rem 2rem;
+    text-align: center;
+    color: white;
+    position: relative;
+    display:flex;
+    justify-content:center;
+    height:350px;
+  }
+
+  .hero .text{
+    transform: translateX(-50%);
+    width: 20%;
+    height: auto;
+    align-self: center;
+    font-size: 300%;
+  }
+
+  .hero h1 {
+    font-size: 125%;
+    letter-spacing: 0.2em;
+    margin: 0;
+    
+  }
+  
+  .hero p {
+    margin: 1rem 0;
+  }
+  
+  .hero button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1.4rem;
+  }
+  
+  .hero img {
+    position: absolute;
+    right:25%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20%;
+    height: auto;
+  }
+  
+  .section {
+    background: repeating-linear-gradient(
+      90deg,
+      #fce5d0,
+      #fce5d0 30px,
+      #fad0c4 30px,
+      #fad0c4 60px
+    );
+    padding: 2rem;
+  }
+  
+  .section h2 {
+    margin: 1rem 0;
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  
+  .popular-row {
+    width:50%;
+    height:250px;
+    display: flex;
+    justify-content:center;
+    width:100%;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .popular-box {
+    background-color: #d4484f;
+    width: 30%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(180px, 0.3fr));
+    gap: 0.75rem;
+    justify-items: center;
+    padding: 1rem 0;
+  }
+  
+.details{
+    height:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+  .product-card {
+    background-color: #f25f66;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 0px;
+    width: 60%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+  }
+  
+  .product-card img {
+    width:100%;
+    max-width: fit-content;
+    height:auto;
+    max-height: 250px;
+    margin: 0 auto 1rem;
+  }
+  
+  .product-card h3,
+  .product-card p {
+    font-size: 2rem;
+    margin: 0;
+  }
+  
