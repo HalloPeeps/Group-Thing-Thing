@@ -1,0 +1,28 @@
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #E84A50;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+  
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 120%;
+  }
+
+.home-link a {
+  font-size: 250%;
+}
+
+.nav-links-container {
+  display: flex;
+}
+.nav-links-container a {
+  padding-left: 1em;
+  padding-right: 1em;
+}
