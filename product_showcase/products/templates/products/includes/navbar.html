@@ -1,12 +1,20 @@
-<!DOCTYPE html>
 <!-- main navbar that will be present on most pages -->
- 
-<div class="navbar">
-    <a href="" class="navbar-home">APLE</a>
-    <a href="" class="navbar-item">About Us</a>
-    <a href="" class="navbar-item">Our Project</a>
+{% load static %} <!-- you must type this every time you want to link a CSS file, otherwise an error will occur -->
 
-    <!-- icons will be present in the navbar that are links to the Cart and Admin Panel -->
-    <a href="" class="navbar-item"><img src="" alt="Cart" style="width:42px;height:42px;"></a>
-    <a href="" class="navbar-item"><img src="" alt="Admin Panel" style="width:42px;height:42px;"></a>
+<link rel="stylesheet" type="text/css" href="{% static 'products/navbar.css' %}"/>
+
+<div class="nav">
+    <div class="home-link">
+        <a href="{% url "product-home" %}"><b>APLE</b></a>
+    </div>
+
+    <div class="nav-links-container">
+        <a href="{% url "about-us" %}">ABOUT US</a>
+        <a href="{% url "our-project" %}">OUR PROJECT</a>
+    </div>
+
+    <div class="nav-links-container">
+        <a href="{% url "about-us" %}">CART</a>
+        <a href="{% url "our-project" %}">ADMIN</a>
+    </div>
 </div>
