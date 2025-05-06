@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block css_files %} <!-- for CSS files that other pages will rely on -->
+    <link rel="stylesheet" href="{% static "products/product_home_styles.css" %}">
+{% endblock %}
+
+
+{% block page_title %}
+APLE | Home
+{% endblock %}
+
+{% block content %} <!-- content is located inside of <body> in "base.html" -->
+    {% include "products/includes/navbar.html"%} <!-- navbar is contained in an "includes" file for easy insertion -->
+
+    <div class="hero">
+        <div class="text">
+          <h1>FEATURED</h1>
+          <p>Blurb</p>
+          <button>Lorem Ipsum!</button>
+        </div>
+          <img src="{% static "products/images/FujiApple.png" %}" alt="Apple" /> <!-- fuji apple -->
+    </div>
+    
+      <div class="section">
+        <h2>Popular Picks</h2>
+        <div class="popular-row">
+          <div class="popular-box"></div>
+          <div class="popular-box"></div>
+          <div class="popular-box"></div>
+        </div>
+    
+        <!-- Discover More -->
+        <section class="section-disc" id="Discover">
+          <h2>Discover More</h2>
+    
+          <div class="product-grid">
+            <!-- Repeat for each product -->
+            <div class="product-card" id="Cortland">
+              <div class="details">
+                <img src="{% static "products/images/CortlandApple.png" %}" alt="Cortland Apple" />
+                <h3>Cortland Apple</h3>
+                <p>Apple Price</p>
+              </div>
+            </div>
+    
+             <div class="product-card" id="Empire">
+              <div class="details">
+                <img src="{% static "products/images/EmpireApple.png" %}" alt="Empire Apple" />
+                <h3>Empire Apple</h3>
+                <p>Apple Price</p>
+              </div>
+            </div>
+    
+             <div class="product-card" id="Fuji">
+              <div class="details">
+                <img src="{% static "products/images/FujiApple.png" %}" alt="Fuji Apple" />
+                <h3>Fuji Apple</h3>
+                <p>Apple Price</p>
+              </div>
+            </div>
+    
+             <div class="product-card" id="Gala">
+              <div class="details">
+                <img src="{% static "products/images/GalaApple.png" %}" alt="Gala Apple" />
+                <h3>Gala Apple</h3>
+                <p>Apple Price</p>
+              </div>
+            </div>
+    
+             <div class="product-card" id="Golden">
+              <div class="details">
+                <img src="{% static "products/images/GoldenDelicious.png" %}" alt="Golden Delicious Apple" />
+                <h3>Golden Delicious</h3>
+                <p>Apple Price</p>
+              </div>
+            </div>
+    
+             <div class="product-card" id="Granny">
+              <div class="details">
+                <img src="{% static "products/images/GrannySmith.png" %}" alt="Granny Smith Apple" />
+                <h3>Granny Smith</h3>
+                <p>Apple Price</p>
+              </div>
+            </div>
+    
+             <div class="product-card" id="Honey">
+              <div class="details">
+                <img src="{% static "products/images/Honeycrisp.png" %}" alt="Honeycrisp Apple" />
+                <h3>Honeycrisp</h3>
+                <p>Apple Price</p>
+              </div>
+            </div>
+            
+             <div class="product-card" id="Red">
+              <div class="details">
+                <img src="{% static "products/images/RedDelicious.png" %}" alt="Red Delicious Apple"/>
+                <h3>Red Delicious</h3>
+                <p>Apple Price</p>
+              </div>
+            </div>
+    
+          </div>
+        </section>
+    
+          <!-- Footer -->
+        <footer>
+          <p>&copy; 2025 APLE Inc. All rights reserved.</p>
+        </footer>
+{% endblock %}

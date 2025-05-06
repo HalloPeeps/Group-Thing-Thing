@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block css_files %} <!-- for CSS files that other pages will rely on -->
+    <link rel="stylesheet" href="#">
+{% endblock %}
+
+
+{% block page_title %}
+APLE | View Product
+{% endblock %}
+
+{% block content %} <!-- content is located inside of <body> in "base.html" -->
+    {% include "products/includes/navbar.html"%} <!-- navbar is contained in an "includes" file for easy insertion -->
+{% endblock %}
