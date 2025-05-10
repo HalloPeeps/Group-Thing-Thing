@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block css_files %} <!-- for CSS files that other pages will rely on -->
+    <link rel="stylesheet" href="{% static "products/product_home_styles.css" %}">
+{% endblock %}
+
+{% block page_title %}
+APLE | Feedback
+{% endblock %}
+
+{% block content %} <!-- content is located inside of <body> in "base.html" -->
+
+    {% include "products/includes/navbar.html"%}
+    <!-- feedback form -->
+    <div class="section">
+        <p>Have any suggestions or inquiries? Submit a message below!</p>
+        
+        <form method="POST" class="log-form"> 
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="save btn btn-default">Submit</button>
+        </form>
+    </div>
+    {% include "products/includes/footer.html"%}
+
+{% endblock %}
