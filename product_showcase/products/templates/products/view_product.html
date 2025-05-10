@@ -1,9 +1,9 @@
-{% extends "base.html" %}
+{% extends "products/product_detail.html" %}
 {% load static %}
 
 
 {% block css_files %} <!-- for CSS files that other pages will rely on -->
-    <link rel="stylesheet" href="#">
+    <link rel="stylesheet" href="{% static "products/view_product.css" %}">
 {% endblock %}
 
 
@@ -11,6 +11,10 @@
 APLE | View Product
 {% endblock %}
 
-{% block content %} <!-- content is located inside of <body> in "base.html" -->
-    {% include "products/includes/navbar.html"%} <!-- navbar is contained in an "includes" file for easy insertion -->
+{% block content %}
+    {% include "products/includes/navbar.html"%}
 {% endblock %}
+
+{% block product_img %}<img src="{% static apple_image %}" alt={{ apple_name }} />{% endblock %}
+
+{% block apple_name %}{{ apple_name }}{% endblock %}
