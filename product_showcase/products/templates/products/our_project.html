@@ -3,7 +3,7 @@
 
 
 {% block css_files %} <!-- for CSS files that other pages will rely on -->
-    <link rel="stylesheet" href="#">
+    <link rel="stylesheet" href="{% static "products/product_home_styles.css"%}">
 {% endblock %}
 
 
@@ -13,4 +13,8 @@ APLE | Our Project
 
 {% block content %} <!-- content is located inside of <body> in "base.html" -->
     {% include "products/includes/navbar.html"%} <!-- navbar is contained in an "includes" file for easy insertion -->
+
+    <div class="section">
+        <h3>This is a conceptual page that should display information about how we built our project.</h3>
+    <div>
 {% endblock %}
