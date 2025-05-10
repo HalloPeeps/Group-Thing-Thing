@@ -17,8 +17,8 @@ APLE | Home
     <div class="hero">
         <div class="text">
           <h1>FEATURED</h1>
-          <p>Blurb</p>
-          <button>Lorem Ipsum!</button>
+          <p><i>Taste a Luxurious Fuji Apple!</i></p>
+          <button><a href="{% url 'product-detail' 'Fuji Apple' %}">View Product</a></button>
         </div>
           <img src="{% static "products/images/FujiApple.png" %}" alt="Apple" /> <!-- fuji apple -->
     </div>
@@ -40,72 +40,68 @@ APLE | Home
             <div class="product-card" id="Cortland">
               <div class="details">
                 <img src="{% static "products/images/CortlandApple.png" %}" alt="Cortland Apple" />
-                <h3>Cortland Apple</h3>
-                <p>Apple Price</p>
+                <h3><a href="{% url 'product-detail' 'Cortland Apple' %}">Cortland Apple</a></h3>
+                <p>$20.00 / box</p>
               </div>
             </div>
     
              <div class="product-card" id="Empire">
               <div class="details">
                 <img src="{% static "products/images/EmpireApple.png" %}" alt="Empire Apple" />
-                <h3>Empire Apple</h3>
-                <p>Apple Price</p>
+                <h3><a href="{% url 'product-detail' 'Empire Apple' %}">Empire Apple</a></h3>
+                <p>$20.00 / box</p>
               </div>
             </div>
     
              <div class="product-card" id="Fuji">
               <div class="details">
                 <img src="{% static "products/images/FujiApple.png" %}" alt="Fuji Apple" />
-                <h3>Fuji Apple</h3>
-                <p>Apple Price</p>
+                <h3><a href="{% url 'product-detail' 'Fuji Apple' %}">Fuji Apple</a></h3> <!-- dynamic link -->
+                <p>$20.00 / box</p>
               </div>
             </div>
     
              <div class="product-card" id="Gala">
               <div class="details">
                 <img src="{% static "products/images/GalaApple.png" %}" alt="Gala Apple" />
-                <h3>Gala Apple</h3>
-                <p>Apple Price</p>
+                <h3><a href="{% url 'product-detail' 'Gala Apple' %}">Gala Apple</a></h3>
+                <p>$20.00 / box</p>
               </div>
             </div>
     
              <div class="product-card" id="Golden">
               <div class="details">
                 <img src="{% static "products/images/GoldenDelicious.png" %}" alt="Golden Delicious Apple" />
-                <h3>Golden Delicious</h3>
-                <p>Apple Price</p>
+                <h3><a href="{% url 'product-detail' 'Golden Delicious' %}">Golden Delicious</a></h3>
+                <p>$20.00 / box</p>
               </div>
             </div>
     
              <div class="product-card" id="Granny">
               <div class="details">
                 <img src="{% static "products/images/GrannySmith.png" %}" alt="Granny Smith Apple" />
-                <h3>Granny Smith</h3>
-                <p>Apple Price</p>
+                <h3><a href="{% url 'product-detail' 'Granny Smith' %}">Granny Smith</a></h3>
+                <p>$20.00 / box</p>
               </div>
             </div>
     
              <div class="product-card" id="Honey">
               <div class="details">
                 <img src="{% static "products/images/Honeycrisp.png" %}" alt="Honeycrisp Apple" />
-                <h3>Honeycrisp</h3>
-                <p>Apple Price</p>
+                <h3><a href="{% url 'product-detail' 'Honeycrisp Apple' %}">Honeycrisp Apple</a></h3>
+                <p>$20.00 / box</p>
               </div>
             </div>
             
              <div class="product-card" id="Red">
               <div class="details">
                 <img src="{% static "products/images/RedDelicious.png" %}" alt="Red Delicious Apple"/>
-                <h3>Red Delicious</h3>
-                <p>Apple Price</p>
+                <h3><a href="{% url 'product-detail' 'Red Delicious' %}">Red Delicious</a></h3>
+                <p>$20.00 / box</p>
               </div>
             </div>
     
           </div>
         </section>
-    
-          <!-- Footer -->
-        <footer>
-          <p>&copy; 2025 APLE Inc. All rights reserved.</p>
-        </footer>
+      {% include "products/includes/footer.html"%}
 {% endblock %}
