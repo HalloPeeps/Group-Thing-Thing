@@ -43,6 +43,20 @@ body {
     cursor: pointer;
     font-size: 1.4rem;
   }
+
+  /* changes color of button link */
+  .hero a:link {
+    color: white;
+  }
+  .hero a:hover {
+    color: #fce5d0;
+  }
+  .hero a:visited {
+    color: #fce5d0;
+  }
+  .hero a:active {
+    color: #d0fce6;
+  }
   
   .hero img {
     position: absolute;
@@ -53,7 +67,7 @@ body {
     height: auto;
   }
   
-  .section {
+  .section { /* makes striped background */
     background: repeating-linear-gradient(
       90deg,
       #fce5d0,
@@ -93,6 +107,20 @@ body {
     gap: 0.75rem;
     justify-items: center;
     padding: 1rem 0;
+  }
+
+    /* changes color of links in cards */
+  .product-grid a:link {
+    color: white;
+  }
+  .product-grid a:hover {
+    color: #fce5d0;
+  }
+  .product-grid a:visited {
+    color: #fce5d0;
+  }
+  .product-grid a:active {
+    color: #d0fce6;
   }
   
 .details{
@@ -139,3 +167,8 @@ body {
     cursor: pointer;
     font-size: 1.4rem;
   }
+
+  /* feedback form */
+input[name=message] {
+  width: 80%;
+}
