@@ -1,4 +1,14 @@
 /* styles for product_home.html */
+html {
+  background: repeating-linear-gradient(
+    90deg,
+    #fce5d0,
+    #fce5d0 30px,
+    #fad0c4 30px,
+    #fad0c4 60px
+  );
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif, Italiana,;
