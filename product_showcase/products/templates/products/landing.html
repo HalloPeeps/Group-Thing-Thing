@@ -1,24 +1,55 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8"/>
-        <title>APLE | Welcome</title>
-        <!-- {% load static %} -->
-        <!-- <link rel="stylesheet" type="text/css" href="{% static ' ' %}"/> -->
-    </head>
-    <body>
-        <div class="mini-navbar"> <!-- small navbar that is only present in the landing page -->
-        <!-- need an "About Us" and "Our Project" link -->
-            <a href="" class="navbar-item">About Us</a>
-            <a href="" class="navbar-item">Our Project</a>
-        </div>
+{% extends "base.html" %}
+{% load static %}
+
+{% block css_files %} <!-- for CSS files that other pages will rely on -->
+    <link rel="stylesheet" href="{% static "products/landing.css" %}">
+{% endblock %}
+
+{% block page_title %}
+APLE | Welcome
+{% endblock %}
+
+{% block content %}
+<div class="navbar"> <!-- small navbar that is only present in the landing page -->
+    <!-- need an "About Us" and "Our Project" link -->
+        <a href="{% url "about-us" %}" class="navbar-item">ABOUT US</a>
+        <a href="{% url "our-project" %}" class="navbar-item">OUR PROJECT</a>
+    </div>
+
+    <hr class="divider"> 
+
+    <div class="content-container">
 
         <div class="message-container">
-            <h1>APLE</h1>
+            <p class="site-name">APLE</p>
             <!-- below is a placeholder message -->
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+             <div class="subtext">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+            
             <a class="button" href="{% url "product-home" %}"><button type="button">SHOP NOW</button></a>
         </div>
-    </body>
-</html>
-<!-- This page doesn't really need to extend any templates since its format is one-of-a-kind on the site. -->
+
+        <div class="apples">
+            <div class="apple-row">
+                <img src="{% static "products/images/EmpireApple.png" %}" alt="Empire Apple">
+                <img src="{% static "products/images/CortlandApple.png" %}" alt="Cortland Apple">
+                <img src="{% static "products/images/GoldenDelicious.png" %}" alt="Golden Delicious">
+                <img src="{% static "products/images/GrannySmith.png" %}" alt="Granny Smith">
+            </div>
+            <div class="apple-row">
+                <img src="{% static "products/images/GrannySmith.png" %}" alt="Granny Smith">
+                <img src="{% static "products/images/EmpireApple.png" %}" alt="Empire Apple">
+                <img src="{% static "products/images/CortlandApple.png" %}" alt="Cortland Apple">
+                <img src="{% static "products/images/GoldenDelicious.png" %}" alt="Golden Delicious">
+            </div>
+            <div class="apple-row">
+                <img src="{% static "products/images/GoldenDelicious.png" %}" alt="Golden Delicious">
+                <img src="{% static "products/images/GrannySmith.png" %}" alt="Granny Smith">
+                <img src="{% static "products/images/EmpireApple.png" %}" alt="Empire Apple">
+                <img src="{% static "products/images/CortlandApple.png" %}" alt="Cortland Apple">
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
