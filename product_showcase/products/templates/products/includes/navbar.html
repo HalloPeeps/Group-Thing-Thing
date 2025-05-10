@@ -13,8 +13,9 @@
         <a href="{% url "our-project" %}">OUR PROJECT</a>
     </div>
 
-    <div class="nav-links-container"> <!-- (CART and ADMIN do not go to the proper link because there is currently no view for it). -->
-        <a href="{% url "about-us" %}">CART</a>
-        <a href="{% url "our-project" %}">ADMIN</a>
+    <div class="nav-links-container">
+        <a href="{% url "view-cart" %}">CART</a>
+        <a href="{% url "feedback-form" %}">FEEDBACK</a>
+        <a href="/admin/">ADMIN</a>
     </div>
 </div>
