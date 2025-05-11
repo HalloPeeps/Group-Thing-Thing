@@ -1,19 +1,16 @@
-{% load static %} <!-- take CSS made by Andrew and link it here! -->
+{% load static %}
 
-<!-- things that change: product images, product name, price -->
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{% block page_title %}{% endblock %}</title> <!-- page title depends on what page you're on -->
+        <title>{% block page_title %}{% endblock %}</title>
     </head>
 
     {% block css_files %} <!-- for CSS files that the page will rely on -->
 
     {% endblock %}
-
-    <!-- put navbar INLCUDES here -->
 
     <body>
         {% block content %}
@@ -39,7 +36,7 @@
                     </div>
             
                     <div class="description">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.           </p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
                     </div>
                 </div>
         
