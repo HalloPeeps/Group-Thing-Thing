@@ -62,7 +62,7 @@ def our_project(request):
     return render(request, "products/our_project.html")
     print("FOR TESTING PURPOSES: Displays our project timeline!")
 
-def log_message(request):
+def log_message(request): # used in log_message.html ; feedback needs to be viewable via admin panel
     form = LogMessageForm(request.POST or None)
 
     if request.method == "POST":
@@ -70,7 +70,7 @@ def log_message(request):
             message = form.save(commit=False)
             message.log_date = datetime.now()
             message.save()
-            return redirect("product_home") # this is currently acting weird.
+            return redirect("product-home") 
     else:
         return render(request, "products/log_message.html", {"form": form})
 
