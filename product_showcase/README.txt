@@ -8,3 +8,5 @@ If you want to view the project in progress, you can start a development server 
 Make sure your directory is in "product_showcase" , otherwise the server won't run.
 
 Example (your directory should look something like this):  C:\Users\1014H\Group-Thing-Thing\product_showcase> 
+
+This is a test.
