@@ -70,7 +70,7 @@ def log_message(request): # used in log_message.html ; feedback needs to be view
             message = form.save(commit=False)
             message.log_date = datetime.now()
             message.save()
-            return redirect("product-home") 
+            return redirect("feedback-form") 
     else:
         return render(request, "products/log_message.html", {"form": form})
 
