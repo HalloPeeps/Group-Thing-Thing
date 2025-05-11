@@ -5,6 +5,8 @@ from django.shortcuts import redirect
 from products.forms import LogMessageForm
 from products.models import LogMessage
 from django.views.generic import ListView
+from .forms import CommentForm
+from .models import Comment
 
 apples = { # to be inserted into view function for product details
     "Cortland Apple" : "products/images/CortlandApple.png",
@@ -32,9 +34,24 @@ def product_detail(request, apple):
     if apple not in apples: # if the apple does not exist, raise a 404 error
         raise Http404("Apple not found.")
     apple_img_link = apples[apple] # sets apple_img to the link of the apple image in "apples" dictionary
+
+    comments = Comment.objects.filter(product_slug=apple).order_by('-created_at')
+
+    if request.method == 'POST':
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            comment = form.save(commit=False)
+            comment.product_slug = apple
+            comment.save()
+            return redirect('product-detail', apple=apple)
+    else:
+        form = CommentForm()
+
     return render(request, "products/view_product.html", {
             "apple_image": apple_img_link,
-            "apple_name": apple
+            "apple_name": apple,
+            "form": form,
+            "comments": comments,
         })
 
 def about_us(request):

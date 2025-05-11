@@ -46,6 +46,26 @@
                 <div class="buttons">
                     <button class="btn">ADD TO CART</button>
                     <button class="btn">BUY NOW</button>
+
+                      <!-- comment section -->
+                    <div class="comments-section">
+                        <h2>Leave a Comment</h2>
+                        <form method="post">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                            <button type="submit">Post Comment</button>
+                        </form>
+
+                        <h3>Comments</h3>
+                        {% for comment in comments %}
+                            <div class="comment">
+                                <strong>{{ comment.name }}</strong> ({{ comment.created_at|date:"M d, Y H:i" }})
+                                <p>{{ comment.text }}</p>
+                            </div>
+                        {% empty %}
+                            <p>No comments yet!</p>
+                        {% endfor %}
+                    </div>
                 </div>
             </div>
         </section>

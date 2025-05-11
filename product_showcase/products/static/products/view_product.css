@@ -130,3 +130,20 @@ body {
     border: none;
     border-top: 1px solid #5d2c38;
   }
+
+  .comment-section p,
+  .comment-section h3,
+  .comment-section h2 {
+    color: #5d2c38;
+  }
+
+  .comment-section button {
+    border: 2px solid #5d2c38;
+    background: transparent;
+    color: #5d2c38;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.2s;
+    max-width: fill;
+  }
