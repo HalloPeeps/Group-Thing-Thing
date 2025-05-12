@@ -20,3 +20,8 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"Comment by {self.name} on {self.product_slug}"
+    
+class Apple(models.Model):
+    variety = models.CharField(max_length=20)
+    price = models.IntegerField()
+    rating = models.IntegerField()
